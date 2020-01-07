@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="maMQz7W" resname="nb_of_comments">
+        <source>nb_of_comments</source>
+        <target>{count, plural, =0 {There are no comments.} one {There is one comment.} other {There are # comments.}}</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

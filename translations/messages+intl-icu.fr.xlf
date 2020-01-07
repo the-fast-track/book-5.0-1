@@ -17,6 +17,10 @@
         <source>Conference Guestbook</source>
         <target>Livre d'Or pour Conferences</target>
       </trans-unit>
+      <trans-unit id="Dg2dPd6" resname="nb_of_comments">
+        <source>nb_of_comments</source>
+        <target>{count, plural, =0 {Aucun commentaire.} =1 {1 commentaire.} other {# commentaires.}}</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
