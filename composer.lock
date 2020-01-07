@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d13b5e946b3433c3c02919e46462cdc7",
+    "content-hash": "421694c7737a205a19aba145d7ee6552",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -4046,6 +4046,62 @@
                 "logging"
             ],
             "time": "2019-11-13T13:11:14+00:00"
+        },
+        {
+            "name": "symfony/notifier",
+            "version": "v5.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/notifier.git",
+                "reference": "6345175bd16786036263068253c961afc3c15352"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/notifier/zipball/6345175bd16786036263068253c961afc3c15352",
+                "reference": "6345175bd16786036263068253c961afc3c15352",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5"
+            },
+            "conflict": {
+                "symfony/http-kernel": "<4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Notifier\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A library to notify messages",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "notification",
+                "notifier"
+            ],
+            "time": "2019-11-18T17:27:11+00:00"
         },
         {
             "name": "symfony/options-resolver",
