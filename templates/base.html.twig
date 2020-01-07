@@ -34,6 +34,16 @@
                                     Admin
                                 </a>
                             </li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="dropdown-language" role="button"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ app.request.locale|locale_name(app.request.locale)|u.title }}
+    </a>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-language">
+        <a class="dropdown-item" href="{{ path('homepage', {_locale: 'en'}) }}">English</a>
+        <a class="dropdown-item" href="{{ path('homepage', {_locale: 'fr'}) }}">Français</a>
+    </div>
+</li>
                         </ul>
                     </div>
                 </div>

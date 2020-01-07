@@ -31,7 +31,8 @@
         "symfony/yaml": "5.0.*",
         "twig/cssinliner-extra": "^3.0",
         "twig/inky-extra": "^3.0",
-        "twig/intl-extra": "^3.0"
+        "twig/intl-extra": "^3.0",
+        "twig/string-extra": "^3.0"
     },
     "require-dev": {
         "dama/doctrine-test-bundle": "^6.3",
