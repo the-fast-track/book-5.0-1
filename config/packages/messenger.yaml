@@ -20,3 +20,5 @@ framework:
             # Route your messages to the transports
             App\Message\CommentMessage: async
             Symfony\Component\Mailer\Messenger\SendEmailMessage: async
+            Symfony\Component\Notifier\Message\ChatMessage: async
+            Symfony\Component\Notifier\Message\SmsMessage: async
