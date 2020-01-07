@@ -25,6 +25,7 @@
         "symfony/slack-notifier": "5.0.*",
         "symfony/string": "5.0.*",
         "symfony/test-pack": "^1.0",
+        "symfony/translation": "5.0.*",
         "symfony/twig-pack": "^1.0",
         "symfony/webpack-encore-bundle": "^1.7",
         "symfony/workflow": "5.0.*",
