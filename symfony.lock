@@ -130,6 +130,9 @@
     "egulias/email-validator": {
         "version": "2.1.13"
     },
+    "imagine/imagine": {
+        "version": "1.2.3"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
