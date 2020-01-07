@@ -4,6 +4,7 @@ type: php:7.3
 
 runtime:
     extensions:
+        - amqp
         - redis
         - pdo_pgsql
         - apcu
@@ -19,6 +20,7 @@ build:
 relationships:
     database: "db:postgresql"
     redis: "rediscache:redis"
+    rabbitmq: "queue:rabbitmq"
 
 web:
     locations:
