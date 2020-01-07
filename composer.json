@@ -12,6 +12,7 @@
         "symfony/yaml": "5.0.*"
     },
     "require-dev": {
+        "symfony/profiler-pack": "^1.0"
     },
     "config": {
         "preferred-install": {
