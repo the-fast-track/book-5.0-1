@@ -1,0 +1,32 @@
+name: spa
+
+type: php:7.3
+size: S
+disk: 256
+
+build:
+    flavor: none
+
+dependencies:
+    nodejs:
+        yarn: "*"
+
+web:
+    commands:
+        start: sleep
+    locations:
+        "/":
+            root: "public"
+            index:
+                - "index.html"
+            scripts: false
+            expires: 10m
+
+hooks:
+    build: |
+        set -x -e
+
+        curl -s https://get.symfony.com/cloud/configurator | (>&2 bash)
+        yarn-install
+        npm rebuild node-sass
+        yarn encore prod
