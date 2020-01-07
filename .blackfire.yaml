@@ -1,0 +1,50 @@
+scenarios: |
+    #!blackfire-player
+
+    group login
+        visit url('/login')
+        submit button("Sign in")
+            param username "admin"
+            param password "admin"
+            expect status_code() == 302
+
+    scenario
+        name "Submit a comment on the Amsterdam conference page"
+        include login
+        visit url('/fr/conference/amsterdam-2019')
+            expect status_code() == 200
+        submit button("Submit")
+            param comment_form[author] 'Fabien'
+            param comment_form[email] 'me@example.com'
+            param comment_form[text] 'Such a good conference!'
+            param comment_form[photo] file(fake('image', '/tmp', 400, 300, 'cats'), 'awesome-cat.jpg')
+            expect status_code() == 302
+        follow
+            expect status_code() == 200
+            expect not(body() matches "/Such a good conference/")
+            # Wait for the workflow to validate the submissions
+            wait 5000
+        when env != "prod"
+            visit url(webmail_url ~ '/messages')
+                expect status_code() == 200
+                set message_ids json("[*].id")
+            with message_id in message_ids
+                visit url(webmail_url ~ '/messages/' ~ message_id ~ '.html')
+                    expect status_code() == 200
+                    set accept_url css("table a").first().attr("href")
+                visit url(accept_url)
+                    # we don't check the status code as we can deal
+                    # with "old" messages which do not exist anymore
+                    # in the DB (would be a 404 then)
+        when env == "prod"
+            visit url('/admin/?entity=Comment&action=list')
+                expect status_code() == 200
+                set comment_ids css('table.table tbody tr').extract('data-id')
+            with id in comment_ids
+                visit url('/admin/comment/review/' ~ id)
+                    # we don't check the status code as we scan all comments,
+                    # including the ones already reviewed
+        visit url('/fr/')
+            wait 5000
+        visit url('/fr/conference/amsterdam-2019')
+            expect body() matches "/Such a good conference/"
