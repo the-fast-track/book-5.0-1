@@ -19,6 +19,7 @@
         "symfony/string": "5.0.*",
         "symfony/test-pack": "^1.0",
         "symfony/twig-pack": "^1.0",
+        "symfony/workflow": "5.0.*",
         "symfony/yaml": "5.0.*",
         "twig/intl-extra": "^3.0"
     },
