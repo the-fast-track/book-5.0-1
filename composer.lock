@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c065c20e7930a0cffc8063b90b01bcf",
+    "content-hash": "783979a6a89442d37a5f1f17e78ae51f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3529,6 +3529,66 @@
             "time": "2019-10-18T05:41:09+00:00"
         },
         {
+            "name": "symfony/polyfill-intl-grapheme",
+            "version": "v1.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
+                "reference": "45c566a1ca16273f7ea6b930e013462e00e14502"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/45c566a1ca16273f7ea6b930e013462e00e14502",
+                "reference": "45c566a1ca16273f7ea6b930e013462e00e14502",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's grapheme_* functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "grapheme",
+                "intl",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2019-11-27T13:56:44+00:00"
+        },
+        {
             "name": "symfony/polyfill-intl-icu",
             "version": "v1.13.1",
             "source": {
@@ -3642,6 +3702,69 @@
                 "compatibility",
                 "idn",
                 "intl",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2019-11-27T13:56:44+00:00"
+        },
+        {
+            "name": "symfony/polyfill-intl-normalizer",
+            "version": "v1.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
+                "reference": "cfe6ad557c15f3797f667e9518ce759aa04ae4f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/cfe6ad557c15f3797f667e9518ce759aa04ae4f3",
+                "reference": "cfe6ad557c15f3797f667e9518ce759aa04ae4f3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's Normalizer class and related functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "intl",
+                "normalizer",
                 "polyfill",
                 "portable",
                 "shim"
@@ -4349,6 +4472,70 @@
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
             "time": "2019-11-18T17:27:11+00:00"
+        },
+        {
+            "name": "symfony/string",
+            "version": "v5.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/string.git",
+                "reference": "96868dd86d12de86236cb46f774f9a127477bd99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/string/zipball/96868dd86d12de86236cb46f774f9a127477bd99",
+                "reference": "96868dd86d12de86236cb46f774f9a127477bd99",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5",
+                "symfony/polyfill-intl-grapheme": "~1.0",
+                "symfony/polyfill-intl-normalizer": "~1.0",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/translation-contracts": "^1.1|^2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\String\\": ""
+                },
+                "files": [
+                    "Resources/functions.php"
+                ],
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony String component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "grapheme",
+                "i18n",
+                "string",
+                "unicode",
+                "utf-8",
+                "utf8"
+            ],
+            "time": "2019-12-07T13:35:22+00:00"
         },
         {
             "name": "symfony/translation",
