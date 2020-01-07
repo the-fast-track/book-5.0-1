@@ -21,6 +21,7 @@
         "symfony/orm-pack": "^1.0",
         "symfony/process": "5.0.*",
         "symfony/security-bundle": "5.0.*",
+        "symfony/slack-notifier": "5.0.*",
         "symfony/string": "5.0.*",
         "symfony/test-pack": "^1.0",
         "symfony/twig-pack": "^1.0",

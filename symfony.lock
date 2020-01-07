@@ -465,6 +465,9 @@
     "symfony/service-contracts": {
         "version": "v2.0.1"
     },
+    "symfony/slack-notifier": {
+        "version": "v5.0.2"
+    },
     "symfony/stopwatch": {
         "version": "v5.0.2"
     },
