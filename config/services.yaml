@@ -7,6 +7,7 @@ parameters:
     default_admin_email: admin@example.com
     default_domain: '127.0.0.1'
     default_scheme: 'http'
+    app.supported_locales: 'en|fr'
 
     router.request_context.host: '%env(default:default_domain:SYMFONY_DEFAULT_ROUTE_HOST)%'
     router.request_context.scheme: '%env(default:default_scheme:SYMFONY_DEFAULT_ROUTE_SCHEME)%'
