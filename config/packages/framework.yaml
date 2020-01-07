@@ -10,7 +10,7 @@ framework:
         cookie_secure: auto
         cookie_samesite: lax
 
-    #esi: true
+    esi: true
     #fragments: true
     php_errors:
         log: true
