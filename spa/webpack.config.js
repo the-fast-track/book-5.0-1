@@ -7,6 +7,7 @@ Encore
     .cleanupOutputBeforeBuild()
     .addEntry('app', './src/app.js')
     .enablePreactPreset()
+    .enableSassLoader()
     .enableSingleRuntimeChunk()
     .addPlugin(new HtmlWebpackPlugin({ template: 'src/index.ejs', alwaysWriteToDisk: true }))
 ;
