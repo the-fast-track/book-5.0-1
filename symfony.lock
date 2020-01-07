@@ -133,6 +133,9 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "lorenzo/pinky": {
+        "version": "1.0.5"
+    },
     "monolog/monolog": {
         "version": "2.0.2"
     },
@@ -537,7 +540,16 @@
     "symfony/yaml": {
         "version": "v5.0.2"
     },
+    "tijsverkoyen/css-to-inline-styles": {
+        "version": "2.2.2"
+    },
+    "twig/cssinliner-extra": {
+        "version": "v3.0.1"
+    },
     "twig/extra-bundle": {
+        "version": "v3.0.1"
+    },
+    "twig/inky-extra": {
         "version": "v3.0.1"
     },
     "twig/intl-extra": {

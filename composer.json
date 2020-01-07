@@ -22,6 +22,8 @@
         "symfony/twig-pack": "^1.0",
         "symfony/workflow": "5.0.*",
         "symfony/yaml": "5.0.*",
+        "twig/cssinliner-extra": "^3.0",
+        "twig/inky-extra": "^3.0",
         "twig/intl-extra": "^3.0"
     },
     "require-dev": {
