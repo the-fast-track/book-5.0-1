@@ -4,6 +4,7 @@ type: php:7.3
 
 runtime:
     extensions:
+        - xsl
         - amqp
         - redis
         - pdo_pgsql
