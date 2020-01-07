@@ -5,6 +5,7 @@
         "php": "^7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "api-platform/api-pack": "^1.2",
         "easycorp/easyadmin-bundle": "^2.3",
         "imagine/imagine": "^1.2",
         "sensio/framework-extra-bundle": "^5.5",
