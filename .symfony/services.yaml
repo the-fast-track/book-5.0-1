@@ -10,3 +10,12 @@ queue:
     type: rabbitmq:3.7
     disk: 1024
     size: S
+
+varnish:
+    type: varnish:6.0
+    relationships:
+        application: 'app:http'
+    configuration:
+        vcl: !include
+            type: string
+            path: config.vcl
