@@ -1,0 +1,65 @@
+@import './variables';
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+main {
+    flex: 1;
+}
+
+// Darken buttons
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        @include button-variant($value, $value, darken($value, 10%));
+    }
+}
+
+.navbar-brand {
+    font-family: $font-family-title;
+    font-weight: $font-weight-normal;
+    font-size: 1.8rem;
+}
+
+.navbar-brand, .nav-link {
+    transition: all .15s;
+}
+
+.nav-conference {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.lift {
+    transition: box-shadow .25s ease,transform .25s ease;
+
+    &:focus, &:hover {
+        box-shadow: 0 1rem 2.5rem rgba(22,28,45,.1),0 .5rem 1rem -.75rem rgba(22,28,45,.1)!important;
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+.comment-img {
+    width: 250px;
+    height: 150px;
+
+    img {
+        max-width: 250px;
+        max-height: 150px;
+    }
+}
+
+.comment-text {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+footer {
+    background: #18171b;
+}

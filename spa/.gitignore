@@ -1,0 +1,5 @@
+/node_modules
+/public
+/yarn-error.log
+# used later by Cordova
+/app
