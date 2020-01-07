@@ -1,17 +1,66 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+
+        {% block stylesheets %}
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet" />
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
     <body>
-        <header>
-            <h1><a href="{{ path('homepage') }}">Guestbook</a></h1>
-            {{ render_esi(path('conference_header')) }}
-            <hr />
+        <header class="header">
+            <h1 class="sr-only">
+                Conference Guestbook
+            </h1>
+
+            <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                <div class="container mt-4 mb-3">
+                    <a class="navbar-brand mr-4 pr-2" href="{{ path('homepage') }}">
+                        &#128217; Conference Guestbook
+                    </a>
+
+                    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#header-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Afficher/Cacher la navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="header-menu">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="{{ path('easyadmin') }}">
+                                    Admin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="bg-light border-bottom">
+                <div class="container">
+                    {{ render_esi(path('conference_header')) }}
+                </div>
+            </nav>
         </header>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        <main role="main" class="container mt-5">
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer class="mt-7 px-3 py-5 text-center text-muted">
+            <p>
+                Conference Guestbook
+            </p>
+            <p>
+                <a href="#" class="text-white">Back to top</a>
+            </p>
+        </footer>
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>

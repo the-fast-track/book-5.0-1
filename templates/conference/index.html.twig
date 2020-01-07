@@ -3,12 +3,30 @@
 {% block title %}Conference Guestbook{% endblock %}
 
 {% block body %}
-    <h2>Give your feedback!</h2>
+    <h2 class="mb-5">
+        Give your feedback!
+    </h2>
 
-    {% for conference in conferences %}
-        <h4>{{ conference }}</h4>
-        <p>
-            <a href="{{ path('conference', { slug: conference.slug }) }}">View</a>
-        </p>
+    {% for row in conferences|batch(4) %}
+        <div class="row">
+            {% for conference in row %}
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
+                    <div class="card border shadow lift">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h4 class="font-weight-light">
+                                    {{ conference }}
+                                </h4>
+                            </div>
+
+                            <a href="{{ path('conference', { slug: conference.slug }) }}"
+                               class="btn btn-sm btn-blue stretched-link">
+                                View
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     {% endfor %}
 {% endblock %}
