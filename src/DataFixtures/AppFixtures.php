@@ -8,14 +8,17 @@ use App\Entity\Conference;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class AppFixtures extends Fixture
 {
     private $encoderFactory;
+    private $slugger;
 
-    public function __construct(EncoderFactoryInterface $encoderFactory)
+    public function __construct(EncoderFactoryInterface $encoderFactory, SluggerInterface $slugger)
     {
         $this->encoderFactory = $encoderFactory;
+        $this->slugger = $slugger;
     }
 
     public function load(ObjectManager $manager)
@@ -24,12 +27,14 @@ class AppFixtures extends Fixture
         $amsterdam->setCity('Amsterdam');
         $amsterdam->setYear('2019');
         $amsterdam->setIsInternational(true);
+        $amsterdam->computeSlug($this->slugger);
         $manager->persist($amsterdam);
 
         $paris = new Conference();
         $paris->setCity('Paris');
         $paris->setYear('2020');
         $paris->setIsInternational(false);
+        $paris->computeSlug($this->slugger);
         $manager->persist($paris);
 
         $comment1 = new Comment();
